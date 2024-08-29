@@ -1,0 +1,25 @@
+.card {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  margin: 10px;
+}
+
+.card-title {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.card img {
+  width: 200px;
+}
+
+.card-content {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.card {
+  padding: 2em;
+}

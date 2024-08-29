@@ -1,0 +1,52 @@
+.app {
+  text-align: center;
+  padding: 20px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.example {
+  padding: 16px;
+}
+
+.example h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.example menu {
+  display: flex;
+  gap: 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.example menu li {
+  margin: 0;
+}
+
+.example menu li button,
+.example menu button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.example menu li button:hover,
+.example menu button:hover {
+  background-color: #0056b3;
+}

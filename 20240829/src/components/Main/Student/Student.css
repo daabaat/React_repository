@@ -1,0 +1,25 @@
+/* 학생정보 */
+
+.students {
+  padding-top: 0;
+}
+
+.student {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  width: 150px;
+  background-color: #f9f9f9;
+}
+
+.student h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.student p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #666;
+}
