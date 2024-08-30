@@ -1,7 +1,7 @@
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import quotes from "./quotes";
-
+import { useState } from "react";
 // async function getQuotes() {
 //   const response = await fetch(
 //     "https://korean-advice-open-api.vercel.app/api/advice"
@@ -12,11 +12,17 @@ import quotes from "./quotes";
 // }
 
 function App() {
-  let randomInt = Math.floor(Math.random() * quotes.length);
+  const [randomQuote, setRandomQuote] = useState(0);
+
+  function PrintRandomQuote() {
+    const randomInt = Math.floor(Math.random() * quotes.length);
+    setRandomQuote(randomInt);
+  }
+
   return (
     <div>
       <Header />
-      <Main {...quotes[randomInt]} />
+      <Main {...quotes[randomQuote]} onSelect={PrintRandomQuote} />
     </div>
   );
 }
