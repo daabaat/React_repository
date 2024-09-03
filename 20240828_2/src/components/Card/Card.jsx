@@ -10,7 +10,6 @@ export function Card({
   backgroundColor,
   textColor,
   img,
-  array = ["react"],
 }) {
   return (
     <div
@@ -20,7 +19,6 @@ export function Card({
       <img src={img} alt="" />
       <h2 className="card-title">{subject}</h2>
       <p className="card-content">{body}</p>
-      <p>{array[0]}</p>
     </div>
   );
 }

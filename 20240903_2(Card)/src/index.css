@@ -1,0 +1,95 @@
+.card {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  margin: 10px;
+}
+
+.card-title {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.card img {
+  width: 200px;
+}
+
+.card-content {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.app {
+  text-align: center;
+  padding: 20px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/* 예시 섹션 스타일 */
+.example {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 예시 섹션 제목 스타일 */
+.example h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* 메뉴 스타일 */
+.example menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+/* 리스트 아이템 스타일 */
+.example li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* 버튼 스타일 */
+.example button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.example button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.example button:active {
+  background-color: #004080;
+  transform: translateY(0);
+}
+
+/* 동적 컨텐츠 텍스트 스타일 */
+.example p {
+  font-size: 16px;
+  color: #555;
+  margin-top: 20px;
+}

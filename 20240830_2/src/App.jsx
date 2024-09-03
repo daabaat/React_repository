@@ -34,17 +34,18 @@ function App_2() {
 }
 
 function App_3() {
-  const [randomNumber, setRandomNumber] = useState([]);
+  const [randomNumberArray, setRandomNumberArray] = useState([]);
 
   function PrintRandomNumber() {
     let randomNum = Math.floor(Math.random() * 100);
 
-    setRandomNumber(randomNumber.concat(randomNum));
+    // setRandomNumber(randomNumber.concat(randomNum));
+    setRandomNumberArray([...randomNumberArray, randomNum]);
   }
 
   return (
     <div className="app">
-      <h1>{randomNumber.join(",")}</h1>
+      <h1>{randomNumberArray.join(",")}</h1>
       <button onClick={PrintRandomNumber}>랜덤숫자넣기</button>
     </div>
   );

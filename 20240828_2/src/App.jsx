@@ -11,11 +11,10 @@
 
 import React from "react";
 import { useState } from "react";
-import componentImg from "./assets/components.png";
-import confgImg from "./assets/config.png";
-import jsxImg from "./assets/jsx-ui.png";
+
 import { Card } from "./components/Card/Card";
 import TabButton from "./components/TabButton/TabButton";
+import cardData from "./cardData";
 /**
  * 자바스크립트 구조분해(destructuring)
  *
@@ -57,29 +56,9 @@ function App() {
     <div className="app">
       <h1>React Props 연습</h1>
       <div className="card-container">
-        <Card
-          title="리액트 props"
-          content="react props는 컴포넌트에 데이터를 전달하는 방법입니다."
-          backgroundColor="#ffddc1"
-          textColor="#333"
-          img={componentImg}
-          array={["자바스크립트"]}
-        />
-        <Card
-          title="Reusable Component"
-          content="Card 컴포넌트를 재사용하여 다양한 데이터를 보여줄 수 있습니다."
-          backgroundColor="#c1d7ff"
-          textColor="#333"
-          img={confgImg}
-          array={["플러터"]}
-        />
-        <Card
-          title="Dynamic Styling"
-          content="props를 이용해 동적으로 스타일을 변경할 수 있습니다."
-          backgroundColor="#d1ffc1"
-          textColor="#333"
-          img={jsxImg}
-        />
+        <Card {...cardData[0]} />
+        <Card {...cardData[1]} />
+        <Card {...cardData[2]} />
       </div>
       <section className="example">
         <h2>예시</h2>
