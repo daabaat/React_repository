@@ -16,7 +16,7 @@ function App() {
   return (
     <div>
       <div className="App">
-        <ProfileCard
+        {/* <ProfileCard
           {...userData[0]}
           onSelect={() => {
             // EmailPrint(userData[0].email);
@@ -26,6 +26,7 @@ function App() {
         >
           <li>{userData[0].hobbies[0]}</li>
         </ProfileCard>
+
         <ProfileCard
           {...userData[1]}
           onSelect={() => {
@@ -71,7 +72,20 @@ function App() {
           <li>{userData[4].hobbies[2]}</li>
           <li>{userData[4].hobbies[3]}</li>
           <li>{userData[4].hobbies[4]}</li>
-        </ProfileCard>
+        </ProfileCard> */}
+        {userData.map((user, index) => (
+          <ProfileCard
+            {...user}
+            key={index}
+            onSelect={() => {
+              ChangeEmail(user.email);
+            }}
+          >
+            {user.hobbies.map((hobby, index) => (
+              <li key={index}>{hobby}</li>
+            ))}
+          </ProfileCard>
+        ))}
       </div>
       <p>{selectedEmail}</p>
     </div>

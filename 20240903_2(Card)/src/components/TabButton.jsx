@@ -1,11 +1,13 @@
-function TabButton({ children, onSelect }) {
+function TabButton({ children, onSelect, isSelected }) {
   // function handleClick() {
   //   console.log("hello world");
   // }
 
   return (
     <li>
-      <button onClick={onSelect}>{children}</button>
+      <button onClick={onSelect} className={isSelected ? "active" : undefined}>
+        {children}
+      </button>
     </li>
   );
 }
