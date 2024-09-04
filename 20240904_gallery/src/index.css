@@ -1,0 +1,22 @@
+/* 전체 컨테이너 스타일 */
+div {
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+}
+
+/* 텍스트 문단 스타일 */
+p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* 사진 그리드 스타일 */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 가로로 5개의 열로 설정 */
+  gap: 20px;
+}

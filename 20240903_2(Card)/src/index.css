@@ -35,7 +35,9 @@
 h1 {
   margin-bottom: 20px;
 }
-
+header {
+  text-align: center;
+}
 /* 예시 섹션 스타일 */
 .example {
   margin-top: 40px;
