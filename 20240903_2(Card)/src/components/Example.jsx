@@ -1,6 +1,8 @@
 import TabButton from "./TabButton";
 import { useState } from "react";
 import { data } from "../data";
+import Section from "./Section";
+import Tabs from "./Tabs";
 
 /**
  *
@@ -18,42 +20,50 @@ export default function Example() {
   function handleSelect(topic) {
     setSelectedTopic(topic);
   }
-  return (
-    <section className="example">
-      <h2>예시</h2>
-      <menu>
-        <TabButton
-          onSelect={() => handleSelect("props")}
-          isSelected={selectedTopic === "props"}
-        >
-          데이터 전달
-        </TabButton>
-        <TabButton
-          onSelect={() => handleSelect("component")}
-          isSelected={selectedTopic === "component"}
-        >
-          재사용 컴포넌트
-        </TabButton>
-        <TabButton
-          onSelect={() => handleSelect("styling")}
-          isSelected={selectedTopic === "styling"}
-        >
-          동적 스타일링
-        </TabButton>
-      </menu>
-      {selectedTopic}
 
-      {selectedTopic === undefined ? (
-        <p>주제를 선택해주세요.</p>
-      ) : (
-        <div style={{ backgroundColor: data[selectedTopic].backgroundColor }}>
-          <h3>{data[selectedTopic].title}</h3>
-          <p>{data[selectedTopic].content}</p>
-          <pre>
-            <code>{data[selectedTopic].code}</code>
-          </pre>
-        </div>
-      )}
-    </section>
+  let tabContent = <p>주제를 선택하세요</p>;
+
+  if (selectedTopic) {
+    tabContent = (
+      <div style={{ backgroundColor: data[selectedTopic].backgroundColor }}>
+        <h3>{data[selectedTopic].title}</h3>
+        <p>{data[selectedTopic].content}</p>
+        <pre>
+          <code>{data[selectedTopic].code}</code>
+        </pre>
+      </div>
+    );
+  }
+
+  return (
+    <Section className="example" title="예시">
+      <Tabs
+        container="menu"
+        buttons={
+          <>
+            <TabButton
+              onClick={() => handleSelect("props")}
+              isSelected={selectedTopic === "props"}
+            >
+              데이터 전달
+            </TabButton>
+            <TabButton
+              onClick={() => handleSelect("component")}
+              isSelected={selectedTopic === "component"}
+            >
+              재사용 컴포넌트
+            </TabButton>
+            <TabButton
+              onClick={() => handleSelect("styling")}
+              isSelected={selectedTopic === "styling"}
+            >
+              동적 스타일링
+            </TabButton>
+          </>
+        }
+      >
+        {tabContent}
+      </Tabs>
+    </Section>
   );
 }

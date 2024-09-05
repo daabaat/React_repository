@@ -12,3 +12,4 @@ function Card({ title, content, backgroundColor, textColor, img }) {
 }
 
 export default Card;
+ 
