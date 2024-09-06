@@ -1,0 +1,13 @@
+.contents {
+  display: block;
+  list-style: none;
+  float: left;
+}
+
+.contents-text {
+  display: none;
+}
+
+.contents-text-block {
+  display: block;
+}
