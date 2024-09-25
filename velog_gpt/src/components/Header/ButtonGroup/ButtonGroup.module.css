@@ -1,0 +1,36 @@
+/* 버튼 그룹 스타일 */
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+/* 각 버튼 스타일 */
+.button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* 새 글 작성 버튼 */
+.new-post-btn {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.new-post-btn:hover {
+  background-color: #218838;
+}
